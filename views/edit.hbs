@@ -1,0 +1,41 @@
+        {{#if errors}}
+        <div class="error-box">
+            {{#each errors}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+
+<main>
+
+            <section id="edit-page">
+
+                <article class="edit-page-container">
+                    <form action="" method="post" class="edit-page-form">
+                        <h2>Edit an ad</h2>
+
+                        <label for="headline">Headline:</label>
+                        <input type="text" id="headline" name="head" value="{{currItem.head}}">
+
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" value="{{currItem.location}}">
+
+                        <label for="company-name">Company name:</label>
+                        <input type="text" id="company-name" name="name" value="{{currItem.name}}">
+
+                        <label for="company-description">Company description:</label>
+                        <input type="text" id="company-description" name="description" value="{{currItem.description}}">
+
+                        <article class="edit-page-button">
+                            <button class="btn-edit-ads">Edit</button>
+                        </article>
+                    </form>
+
+                    <article class="edit-page-image">
+                        <!-- Do not forget to change the path to the image -->
+                        <img src="/static/img/job.png" alt="image">
+                    </article>
+                </article>
+
+            </section>
+        </main>
